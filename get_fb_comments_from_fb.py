@@ -118,7 +118,7 @@ def processFacebookComment(comment, status_id, parent_id=''):
 
 
 def scrapeFacebookPageFeedComments(page_id, access_token):
-    with open('{}_facebook_comments.csv'.format(file_id), 'w') as file:
+    with open('{}_facebook_comments.csv'.format(file_id), 'w', encoding='utf-8') as file:
         w = csv.writer(file)
         w.writerow(["comment_id", "status_id", "parent_id", "comment_message",
                     "comment_author", "comment_published", "num_reactions",
